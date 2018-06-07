@@ -28,8 +28,12 @@ def writeToJSON(df):
         
 def open_MapURL(train_id):
     map_url='https://enquiry.indianrail.gov.in/xyzabc/TrainScheduleOnMap?trainNo='+train_id+'&journeyStn=&scrnSize=&langFile=props.en-us'
-    webbrowser.open(map_url)
-        
+    option=input("enter y to open map in browser,else enter n:")
+    if option=='y':
+        webbrowser.open(map_url)
+    else:
+        pass
+    
 train_id=input("Enter 5 Digit Train Number:")
 if len(train_id)>5:
     print("Invalid train No.")
